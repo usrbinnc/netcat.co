@@ -2,3 +2,62 @@
 %html
   %head
     %title netcat | computer music | Seattle, WA
+    %script{src: "//code.jquery.com/jquery-1.11.0.min.js"}
+    %script{src: "/js/jquery.browser.min.js"}
+    %script{src: "http://stratus.sc/stratus.js"}
+    %link{rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'}
+
+  %body
+    %nav.navbar.navbar-default{:role => 'navigation'}
+      .navbar-header
+        %a.navbar-brand{:href => '/'} netcat (replace w/ logo)
+
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => '/'} Album
+        %li
+          %a{:href => '/about'} About
+        %li
+          %a{:href => '/press'} Press
+        %li
+          %a{:href => 'https://github.com/usrbinnc', :target => '_blank'} Source Code
+
+    .container
+      .jumbotron
+        %h1 Do computers improvise?
+        %p (Stick a press photo in here.)
+
+      .row
+        .col-xs-7
+          .panel.panel-default
+            .panel-heading
+              %h3.panel-title
+                Take a listen
+            .panel-body
+              blah blah
+        .col-xs-5
+          .panel.panel-default
+            .panel-heading
+              %h3.panel-title
+                Explore our source code
+            .panel-body
+              %pre
+                $ midishark capture | midishark process | Streamy
+
+              %a.btn.btn-primary.btn-lg.center-block{type: "button", target: "_blank", href: "https://github.com/usrbinnc"}
+                View our code
+
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title
+              The Internet Is An Apt Motherfucker
+            .panel-body
+              %p
+                This piece combines improvisational playing on cello, synth, and drums, with three main technological components. The first component is a purpose-built synthesis/sequencer program*. The piece opens with this program layering a base motif 64 times with a random time offset, creating a blurred, textural reference to the original motif that varies with each performance. The second component is a generative Markov model of phoneme sequences derived from Wikipedia and a collection of scientific papers*. We use the model to generate novel, incoherent speech sounds. The third component is a sentiment-aware model of statements of preference derived from peoples’ actual statements of preference on the internet*. We use the model to generate positive/negative sentiment couplets, recited in synthesized speech.
+
+    :javascript
+      $(document).ready(function () {
+        $('body').stratus({
+          links: "https://soundcloud.com/tableandchairs/sets/neil-welch-boxwork-free-sample"
+        });
+      });

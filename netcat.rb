@@ -6,4 +6,8 @@ class NetcatApp < Sinatra::Application
   get '/beta' do
     haml :index
   end
+
+  get '/chango' do
+    redirect "http://brandonlucia.com/chango.html"
+  end
 end

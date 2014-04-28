@@ -3,10 +3,6 @@ class NetcatApp < Sinatra::Application
     haml :splash
   end
 
-  get '/beta' do
-    haml :index
-  end
-
   get '/chango' do
     redirect "http://brandonlucia.com/chango.html"
   end
